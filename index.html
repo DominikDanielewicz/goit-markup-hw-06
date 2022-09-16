@@ -494,71 +494,49 @@
       <div class="modal">
         <h3 class="modal__heading">Zostaw swoje dane w formularzu poniżej</h3>
         <form class="modal__form">
-          <label class="modal__label" for="user_name">Imię</label>
-          <div class="modal__set">
-            <input
-              type="text"
-              name="name"
-              class="modal__textfield"
-              id="user_name"
-            />
+          <label class="modal__label"
+            >Imię
+            <input type="text" name="name" class="modal__textfield" />
             <svg width="20" height="20" class="modal__icon">
               <use href="images/icons.svg#icon-person"></use>
             </svg>
-          </div>
-          <label class="modal__label" for="user_phone">Telefon</label>
-          <div class="modal__set">
-            <input
-              type="tel"
-              name="phone"
-              id="user_phone"
-              class="modal__textfield"
-            />
+          </label>
+          <label class="modal__label"
+            >Telefon
+            <input type="tel" name="phone" class="modal__textfield" />
             <svg width="20" height="20" class="modal__icon">
               <use href="images/icons.svg#icon-phone"></use>
             </svg>
-          </div>
-
-          <label class="modal__label" for="user_email"> Email</label>
-          <div class="modal__set">
-            <input
-              type="email"
-              name="email"
-              id="user_email"
-              class="modal__textfield"
-            />
+          </label>
+          <label class="modal__label"
+            >Email
+            <input type="email" name="email" class="modal__textfield" />
             <svg width="20" height="20" class="modal__icon">
               <use href="images/icons.svg#icon-email"></use>
             </svg>
-          </div>
-
-          <label class="modal__label" for="user_message"> Komentarz</label>
+          </label>
+          <label class="modal__label"> Komentarz</label>
           <textarea
             name="message"
             rows="5"
             placeholder="Wprowadź tekst"
-            id="user_message"
             class="modal__textarea"
           ></textarea>
-
-          <div class="modal__concent">
-            <div class="modal__checkbox-holder">
-              <input
-                class="modal__checkbox hidden"
-                type="checkbox"
-                name="privacy"
-                value="accept"
-                id="user_concent"
-              />
-              <svg width="12" height="8" class="modal__checkbox-icon">
-                <use href="images/icons.svg#icon-iconcheck"></use>
-              </svg>
-            </div>
-            <label class="modal__checkbox-label" for="user_concent">
-              Oświadczam, iż akceptuję <a href="#">Regulamin</a> i
-              <a href="#">Politykę Prywatności</a>.
-            </label>
-          </div>
+          <label class="modal__checkbox-label">
+            <input
+              class="modal__checkbox hidden"
+              type="checkbox"
+              name="privacy"
+              value="accept"
+            />
+            <svg width="12" height="9" class="modal__checkbox-icon">
+              <use href="images/icons.svg#icon-iconcheck"></use>
+            </svg>
+            <span
+              >Oświadczam, iż akceptuję <a href="#">Regulamin</a> i
+              <a href="#">Politykę Prywatności</a>.</span
+            >
+          </label>
           <button class="modal__button submit-button" type="submit">
             Wyślij
           </button>

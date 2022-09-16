@@ -542,6 +542,10 @@ pre {
   cursor: pointer;
 }
 
+.modal__form {
+  width: 100%;
+}
+
 .modal__heading {
   font-size: 20px;
   margin-bottom: 12px;
@@ -550,23 +554,18 @@ pre {
   font-weight: 700;
 }
 
-.modal__set {
-  position: relative;
-  margin-top: 4px;
-  margin-bottom: 10px;
-  fill: var(--darkgray-color);
-}
-
 .modal__label {
   font-size: 12px;
   letter-spacing: 0.01em;
   line-height: 1.17;
   color: var(--lightgray-color);
+  position: relative;
+  fill: var(--darkgray-color);
 }
 
 .modal__icon {
   position: absolute;
-  top: 50%;
+  top: 46%;
   left: 15px;
   transform: translateY(-50%);
 }
@@ -582,9 +581,11 @@ pre {
   line-height: 1.25;
   background-color: var(--transparent);
   padding-left: 42px;
+  margin-top: 4px;
+  margin-bottom: 10px;
 }
 
-.modal__set:focus-within {
+.modal__label:focus-within {
   fill: var(--main-color);
 }
 
@@ -615,60 +616,35 @@ pre {
   font-size: 12px;
 }
 
-.modal__form {
-  width: 100%;
-}
-
-.modal__concent {
-  font-size: 14px;
-  letter-spacing: 0.03em;
+.modal__checkbox-label {
+  position: relative;
   line-height: 1.17;
+  letter-spacing: 0.03em;
+  color: var(--lightgray-color);
+  font-size: 14px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 30px;
-  transition: all;
-}
-
-.modal__checkbox-holder {
-  position: relative;
-  margin-right: 8px;
-}
-
-.modal__button {
-  margin: 0 auto;
-  display: block;
 }
 
 .modal__checkbox {
+  position: absolute;
+}
+
+.modal__checkbox-icon {
   width: 16px;
   height: 15px;
   border: 2px solid var(--darkgray-color);
   border-radius: 2px;
-}
-
-.modal__checkbox-icon {
-  position: absolute;
-  top: 3px;
-  left: 2px;
-  visibility: hidden;
-}
-
-.modal__checkbox-label {
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: var(--lightgray-color);
-}
-
-.modal__checkbox:checked {
-  background-color: var(--main-color);
-  border: none;
   fill: var(--white);
+  margin-right: 8px;
+  transition: background-color 250ms var(--timingfunction),
+    border 250s var(--timingfunction);
 }
 
 .modal__checkbox:checked + .modal__checkbox-icon {
-  visibility: visible;
-  fill: var(--white);
+  background-color: var(--main-color);
+  border: none;
 }
 
 .modal__checkbox:focus {
@@ -684,17 +660,23 @@ pre {
   opacity: 0.5;
 }
 
+.modal__button {
+  margin: 0 auto;
+  display: block;
+  margin-top: 30px;
+}
+
 .hidden {
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
 }
 
-/* .is-hidden {
+.is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-} */
+}
 
 /* Portfolio */
 .filter {
@@ -742,7 +724,7 @@ pre {
 
 .portfolio__item {
   transition: box-shadow var(--duration) var(--timingfunction),
-    transform 250ms linear;
+    transform var(--duration) linear;
 }
 
 .portfolio__item:hover {
