@@ -640,23 +640,23 @@ pre {
   fill: var(--white);
   margin-right: 8px;
   transition: background-color 250ms var(--timingfunction),
-    border 250s var(--timingfunction);
+    border-color 250ms var(--timingfunction);
 }
 
 .modal__checkbox:checked + .modal__checkbox-icon {
   background-color: var(--main-color);
-  border: none;
+  border: 2px solid var(--main-color);
 }
 
-.modal__checkbox:focus {
-  outline: none;
+.modal__checkbox:focus + .modal__checkbox-icon {
+  border: 2px solid var(--main-color);
 }
 
-.modal__checkbox:disabled {
+.modal__checkbox:disabled + .modal__checkbox-icon {
   background-color: var(--lightgray-color);
 }
 
-.modal__checkbox:checked:disabled {
+.modal__checkbox:checked:disabled + .modal__checkbox-icon {
   background-color: var(--main-color);
   opacity: 0.5;
 }
